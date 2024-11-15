@@ -1,0 +1,26 @@
+.p-datatable-wrapper {
+    .p-datatable-table {
+        .p-datatable-thead{
+            background: #D3D3D3;
+            color: #000;
+            height: 5rem;
+            tr {
+                border: 0.5px solid gray;
+            }
+            th {
+                border-right: 0.5px solid gray;
+                padding: 0 10px;
+            }
+        }
+        .p-datatable-tbody {
+            tr {
+                height: 3rem;
+                border-bottom: 0.5px solid gray;
+            }
+            td {
+                padding: 0 10px;
+                border-right: 0.5px solid gray;
+            }
+        }
+    }
+}
