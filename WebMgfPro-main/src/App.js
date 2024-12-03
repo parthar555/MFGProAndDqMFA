@@ -18,6 +18,7 @@ import MSFigmaScreen from './Sections/MSFigmaScreen';
 import PMOSAFigmaScreen from './Sections/PMOSAFigmaScreen';
 // import AppRemote from 'remote/App';
 const DqApplication = React.lazy(() => import('remote/App'))
+const JobIndicatoreApplication = React.lazy(() => import('remoteJobIndicator/App'))
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -27,7 +28,7 @@ const App = () => {
   
   const pickLeftNavigationToDisplay = () => {
     switch (param.pathname) {
-      case '/site-admin':
+      case '/site-admin/sa':
         return <BootStrapMenu />;
       case '/po':
         return <BootStrapMenuPO />;
@@ -135,6 +136,11 @@ const App = () => {
               <Route
                 path='/dq'
                 element={<DqApplication />}
+                exact
+              ></Route>
+              <Route
+                path='/job-indicator'
+                element={<JobIndicatoreApplication />}
                 exact
               ></Route>
             </Routes>

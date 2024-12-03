@@ -7,16 +7,10 @@ const htmlPlugin = new HtmlWebPackPlugin({
   filename: "./index.html"
 });
 module.exports = {
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index_bundle.js',
-    publicPath: '/'
-  },
   mode: 'development',
   devServer: {
     static: path.join(__dirname, "dist"),
-    port: 3005,
+    port: 3007,
     historyApiFallback: true
   },
   module: {
@@ -52,11 +46,10 @@ module.exports = {
   plugins: [
     htmlPlugin,
     new ModuleFederationPlugin({
-      name: "MfgPro",
-      filename: "remoteEntry.js",
-      remotes: {
-        remote: "remote@http://localhost:3006/remoteEntry.js",
-        remoteJobIndicator: "remoteJobIndicator@http://localhost:3007/remoteJobIndicatorEntry.js"
+      name: "remoteJobIndicator",
+      filename: "remoteJobIndicatorEntry.js",
+      exposes: {
+        "./App": "./src/App"
       },
       shared: {
         react: {
