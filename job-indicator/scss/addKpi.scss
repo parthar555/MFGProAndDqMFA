@@ -1,0 +1,26 @@
+.add-kpi{
+    input{
+        width: 30rem;
+    }
+    .componentWrapper {
+        border: 1px solid #0285C9;
+        border-radius: 10px;
+        padding: 15px 10px 10px;
+        width: 95%;
+    }
+      
+    .componentWrapper .header {
+        position: absolute;
+        margin-top: -30px;
+        margin-left: 10px;
+        color: white;
+        background: #0285C9;
+        border-radius: 10px;
+        padding: 2px 10px;
+        height: 27px;
+    }
+    .p-button{
+        background: #0285C9;
+        border: 1px solid #0285C9;
+    }
+}

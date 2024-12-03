@@ -1,12 +1,11 @@
 import React from 'react'
 import { Routes, Route, Navigate, Link, Router, useParams, useLocation } from "react-router-dom";
-import './App.css';
+import './App.scss';
 import AddKpi from './components/sections/addKpi';
 import { getSearchParameters } from './utils/utils';
 
 function App() {
 var params = getSearchParameters();
-console.log('uuuuuuuu', params.page)
 const pickPageToDisplay = () => {
   switch(params.page) {
     case 'add-kpi':
@@ -16,8 +15,11 @@ const pickPageToDisplay = () => {
   }
 }
   return (
-    <div>
-     {pickPageToDisplay()}
+    <div className='row'>
+      <div className='col m-4'>
+        {pickPageToDisplay()}
+      </div>
+     
     </div>
   );
 }

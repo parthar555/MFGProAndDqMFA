@@ -134,7 +134,7 @@ const App = () => {
                 exact
               ></Route>
               <Route
-                path='/dq'
+                path='/digital-quality'
                 element={<DqApplication />}
                 exact
               ></Route>
