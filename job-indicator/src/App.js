@@ -16,7 +16,7 @@ const pickPageToDisplay = () => {
 }
   return (
     <div className='row'>
-      <div className='col m-4'>
+      <div className='col m-4 ms-5'>
         {pickPageToDisplay()}
       </div>
      
