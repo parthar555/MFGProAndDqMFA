@@ -16,6 +16,10 @@ import PMO from './Sections/PMO';
 import PSFigmaScreen from './Sections/PSFigmaScreen'; 
 import MSFigmaScreen from './Sections/MSFigmaScreen';
 import PMOSAFigmaScreen from './Sections/PMOSAFigmaScreen';
+import SMSScreen from './Sections/SMSScreen';
+import SMSUserProfile from './Components/SMSUserProfile';
+import BootsmsMenu from "./Components/bootsmsMenu";
+
 // import AppRemote from 'remote/App';
 const DqApplication = React.lazy(() => import('remote/App'))
 const JobIndicatoreApplication = React.lazy(() => import('remoteJobIndicator/App'))
@@ -25,7 +29,6 @@ const { Header, Content, Footer, Sider } = Layout;
 
 const App = () => {
   const param = useLocation();
-  
   const pickLeftNavigationToDisplay = () => {
     switch (param.pathname) {
       case '/site-admin/sa':
@@ -35,11 +38,13 @@ const App = () => {
       case '/pmo':
         return <BootStrapMenuPMO />;
       case '/PMOSAFigmaScreen':
-          return <BootStrapMenuPMO />;
+        return <BootStrapMenuPMO />;
       case '/MSFigmaScreen':
-            return <BootStrapMenuPMO />;
+        return <BootStrapMenuPMO />;
       case '/dq':
-        <BootStrapMenu />;
+        return <BootStrapMenu />;
+      case '/SMSScreen':
+        return <BootsmsMenu />;
       default:
         return <BootStrapMenu />;
     }
@@ -59,32 +64,46 @@ const App = () => {
 
       <Layout style={{ height: "100vh", width: "100%" }}>
         <Header className=' header custom-header'
-          style={{ width: "100%", borderBottom: "1.5px solid #d0cdf5", backgroundColor: "#f5f5f5" }}
+          style={{ width: "88%", borderBottom: "1.5px solid #d0cdf5", backgroundColor:  "#f5f5f5" }}
         >
           <div className='header-container'>
-  
-            <div className="testrole" disabled>{param.pathname.replace("/", "").toLocaleUpperCase()}</div>
-          
-              <div className="header-dd">
-              <select className="form-select header-dd" aria-label="Default select example" value="LE-USA025" disabled>
-                <option selected>Frito-LayInc.</option>
-              </select>
+            {
+              param.pathname == '/SMSScreen' ? null :
+                <div className="testrole" disabled>{param.pathname.replace("/", "").toLocaleUpperCase()}</div>
+            }
+            <div style={{ width: '100%', justifyContent: 'flex-end', display: 'flex' }}>
+              <h3 style={{ color: 'black', padding: 10 }}> Seasoning Monitoring System</h3>
 
             </div>
             <div className="header-dd">
-              <select className="form-select header-dd" aria-label="Default select example" disabled>
-                <option selected>LE-USA025</option>
+              {
+                param.pathname == '/SMSScreen' ? null :
 
-              </select>
+                  <select className="form-select header-dd" aria-label="Default select example" value="LE-USA025" disabled>
+                    <option selected>Frito-LayInc.</option>
+                  </select>
+              }
+            </div>
+            <div className="header-dd">
+              {
+                param.pathname == '/SMSScreen' ? null :
+                  <select className="form-select header-dd" aria-label="Default select example" disabled>
+                    <option selected>LE-USA025</option>
+
+                  </select>
+              }
 
             </div>
             <div className="header-dd">
-              <select className="form-select header-dd" aria-label="Default select example" disabled>
-                <option selected>LE-USA025</option>
-              </select>
+              {
+                param.pathname == '/SMSScreen' ? null :
+                  <select className="form-select header-dd" aria-label="Default select example" disabled>
+                    <option selected>LE-USA025</option>
+                  </select>
+              }
             </div>
             <div>
-              <DJButtonWithPopover />
+              {param.pathname == '/SMSScreen' ? <SMSUserProfile /> : <DJButtonWithPopover />}
             </div>
           </div>
         </Header>
@@ -93,6 +112,7 @@ const App = () => {
         >
           <div>
             <Routes>
+
               <Route
                 path='/site-admin'
                 element={<SiteAdmin />}
@@ -118,7 +138,7 @@ const App = () => {
                 element={<PMO />}
                 exact
               ></Route>
-               <Route
+              <Route
                 path='/psfigmascreen'
                 element={<PSFigmaScreen />}
                 exact
@@ -128,7 +148,7 @@ const App = () => {
                 element={<MSFigmaScreen />}
                 exact
               ></Route>
-               <Route
+              <Route
                 path='/pmosafigmascreen'
                 element={<PMOSAFigmaScreen />}
                 exact
@@ -143,16 +163,24 @@ const App = () => {
                 element={<JobIndicatoreApplication />}
                 exact
               ></Route>
+              <Route
+                path='/SMSScreen'
+                element={<SMSScreen />}
+                exact
+              ></Route>
             </Routes>
           </div>
         </Content>
-        <Footer
-          style={{ width: "100%", borderBottom: "1.5px solid #d0cdf5" }}
-          className='footer'
-        >
-        <div style={{ textAlign: "center", margin:"0 auto" ,fontSize: "0.9em", color: "#6c757d" }}>
-          © 2024 PepsiCo. All rights reserved. | Privacy Policy | Terms of Service
-        </div></Footer>
+        {
+          param.pathname !== '/SMSScreen' ?
+            <Footer
+              style={{ width: "100%", borderBottom: "1.5px solid #d0cdf5" }}
+              className='footer'
+            >
+              <div style={{ textAlign: "center", margin: "0 auto", fontSize: "0.9em", color: "#6c757d" }}>
+                © 2024 PepsiCo. All rights reserved. | Privacy Policy | Terms of Service
+              </div></Footer> : null
+        }
       </Layout>
     </Layout>
   );

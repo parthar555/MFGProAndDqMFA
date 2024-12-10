@@ -2,7 +2,7 @@
     width: auto;
     border-radius: 5px;
   }
-  
+
   .menu-item {
     padding: 10px;
     cursor: pointer;
@@ -10,26 +10,60 @@
     border-radius: 5px;
 
   }
-  
-  .menu-item:hover  {
-    background-color: #0484cc ;  /*swati*/
-    color:#ffffff;
-    & .menu-icon{
-      fill:#ffffff;
+
+  .menu-item:hover {
+    background-color: #0484cc;
+    /*swati*/
+    color: #ffffff;
+
+    & .menu-icon {
+      fill: #ffffff;
       color: #ffffff;
     }
   }
- 
-  
+
+
   .menu-title {
     font-weight: bold;
     font-size: 0.75rem;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     text-align: center;
+  }
+
+  .sms-menu-title {
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #0484cc;
+  }
+
+
+  .sms-menu-title:hover {
+    font-weight: bold;
+    font-size: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .menu-text:hover {
+    background-color: #0484cc;
+    /*swati*/
+    color: #ffffff;
+
+    & .menu-icon {
+      fill: #ffffff;
+      color: #ffffff;
     }
-  
+  }
+
   .submenu {
     position: absolute;
     top: 0;
@@ -40,32 +74,34 @@
     background-color: #ffffff;
     /*min-width: 150px; swati */
     padding: 5px 0px 5px 0px;
-   width: 190px;
+    width: 190px;
   }
-  
+
   .submenu-item {
     padding: 8px;
     white-space: nowrap;
     cursor: pointer;
     display: flex;
-    color:#030303;
+    color: #030303;
     align-items: center;
     justify-content: space-between;
   }
-  
+
   .submenu-item:hover {
-    background-color: #0484cc ;  /*swati*/
-    color:#ffffff;
-    &.arrow-icon{
-      color:#ffffff
+    background-color: #0484cc;
+    /*swati*/
+    color: #ffffff;
+
+    &.arrow-icon {
+      color: #ffffff
     }
   }
-  
+
   .arrow-icon {
     margin-left: auto;
     color: #888;
   }
-  
+
   /* Nested submenu should look like submenu */
   .nested-submenu {
     position: absolute;
@@ -78,7 +114,8 @@
     padding: 5px 0px 5px 0px;
     width: 190px;
   }
-  .nested-childsubmenu{
+
+  .nested-childsubmenu {
     position: absolute;
     top: 0;
     left: 100%;
@@ -89,9 +126,10 @@
     padding: 5px 0px 5px 0px;
     width: 190px;
     min-height: 100px;
-   
+
   }
-  .additional-submenu{
+
+  .additional-submenu {
     position: absolute;
     top: 0;
     left: 100%;
@@ -102,4 +140,3 @@
     padding: 5px 0px 5px 0px;
     width: 190px;
   }
- 

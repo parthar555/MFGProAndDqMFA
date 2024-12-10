@@ -7,72 +7,39 @@ import { productionSchedule, reports, shiftLeaderPlanner, shiftPlanner, workflow
 
 
 
-const Menu = () => {
+const bootsmsMenu = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeSubmenu, setActiveSubmenu] = useState(null);
-  //swati
+
   const navigate = useNavigate();
   const handleClick = useCallback((menuTitle) => {
-    console.log("menuTitle", menuTitle);
-    if (menuTitle === 'Production Schedule') {
-      navigate('/PSFigmaScreen');
-    }
+    navigate('/SMSScreen');
   }
   );
 
   const menuData = [
     {
-      title: 'Forms Builder',
-      icon: workflows(),
+      title: 'White Bag Management',
       submenu: [
-        { title: 'Create', children: ['Section of Questions', 'Form'] },
-        { title: 'Libraries', children: ['Sections Library', 'Forms Library'] },
+       ],
+    },
+    {
+      title: 'System Verification',
+      submenu: [
+       ],
+    },
+    {
+      title: 'Service Health',
+      submenu: [
+       ],
+    },
+    {
+      title: 'Bags Consumption ',
+      submenu: [
       ],
     },
     {
-      title: 'Shift Planner',
-      icon: shiftPlanner(),
-      submenu: [
-        { title: 'Shift Planner', children: ['Start Planning'] },
-        { title: 'Shift Leaders Planner', children: ['Start Planning'] },
-
-      ],
-    },
-    {
-      title: 'Shift Leader Planner',
-      icon: shiftLeaderPlanner(),
-      submenu: [
-        { title: 'Shift Planner', children: ['Start Planning'] },
-        { title: 'Shift Leaders Planner', children: ['Start Planning'] },
-      ],
-    },
-    {
-      title: 'Workflows Manager ',
-      icon: workFlowsManager(),
-      submenu: [
-        { title: 'Dashboard', children: ['Build a Workflow'] },
-        { title: 'Forms', children: ['Create Form'] },
-        { title: 'Task', children: ['Create Task'] },
-      ],
-    },
-    {
-      title: 'Production Schedule',
-      icon: shiftLeaderPlanner(),
-      submenu: [],
-    },
-    {
-      title: 'Reports',
-      icon: reports(),
-      submenu: [],
-    },
-    {
-      title: 'Notifications',
-      icon: notifications(),
-      submenu: [],
-    },
-    {
-      title: 'Submit Feedback',
-      icon: feedback(),
+      title: 'Refresh',
       submenu: [],
     },
   ];
@@ -83,16 +50,16 @@ const Menu = () => {
         <div
           key={index}
           className="menu-item"
-          onMouseEnter={() => setActiveMenu(index)}
+          // onMouseEnter={() => setActiveMenu(index)}
           onMouseLeave={() => {
             setActiveMenu(null);
             setActiveSubmenu(null);
           }}
         >
 
-          <div className="menu-title">
+          <div className="menu-title" style={{padding:10, borderRadius:10, }} >
             <div>{menu?.icon}</div>
-            <div className='menu-text' onClick={() => handleClick(menu.title)}>{menu.title}</div>
+            <div style={{}} className='sms-menu-title' onClick={() => handleClick(menu.title)}>{menu.title}</div>
           </div>
           {activeMenu === index && (
             <div className="submenu">
@@ -124,4 +91,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default bootsmsMenu;
