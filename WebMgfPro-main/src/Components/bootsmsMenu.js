@@ -49,7 +49,7 @@ const bootsmsMenu = () => {
       {menuData.map((menu, index) => (
         <div
           key={index}
-          className="menu-item"
+          className="sms-menu-item"
           // onMouseEnter={() => setActiveMenu(index)}
           onMouseLeave={() => {
             setActiveMenu(null);
@@ -59,7 +59,7 @@ const bootsmsMenu = () => {
 
           <div className="menu-title" style={{padding:10, borderRadius:10, }} >
             <div>{menu?.icon}</div>
-            <div style={{}} className='sms-menu-title' onClick={() => handleClick(menu.title)}>{menu.title}</div>
+            <div onClick={() => handleClick(menu.title)}>{menu.title}</div>
           </div>
           {activeMenu === index && (
             <div className="submenu">
