@@ -23,6 +23,24 @@
   }
 
 
+  .sms-menu-item {
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    color:  #0484cc;
+  }
+
+  .sms-menu-item:hover {
+    background-color: #0484cc;
+    color: #ffffff;
+    & .menu-icon {
+      fill: #ffffff;
+      color: #ffffff;
+    }
+  }
+
+
   .menu-title {
     font-weight: bold;
     font-size: 0.75rem;
