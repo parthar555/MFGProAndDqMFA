@@ -5,6 +5,7 @@ import mySvg from './assets/logo.svg';
 import BootStrapMenu from "./Components/bootMenu";
 import BootStrapMenuPMO from "./Components/bootMenuPMO";
 import BootStrapMenuPO from "./Components/bootMenuPO";
+import BootJobIndicator from "./Components/bootJobIndicator";
 import DJButtonWithPopover from './Components/logoutBtn';
 import { icons } from 'antd/es/image/PreviewGroup';
 import { Routes, Route, Navigate, Link, Router, useParams, useLocation } from "react-router-dom";
@@ -13,7 +14,7 @@ import Reports from './Sections/Reports';
 import Preview from './Sections/Preview';
 import PO from './Sections/PO';
 import PMO from './Sections/PMO';
-import PSFigmaScreen from './Sections/PSFigmaScreen'; 
+import PSFigmaScreen from './Sections/PSFigmaScreen';
 import MSFigmaScreen from './Sections/MSFigmaScreen';
 import PMOSAFigmaScreen from './Sections/PMOSAFigmaScreen';
 import SMSScreen from './Sections/SMSScreen';
@@ -45,17 +46,25 @@ const App = () => {
         return <BootStrapMenu />;
       case '/SMSScreen':
         return <BootsmsMenu />;
+      case '/job-indicator':
+        return <BootJobIndicator />;
+
       default:
         return <BootStrapMenu />;
     }
   }
+  console.log("param.pathname " + param.pathname)
 
   return (
     <Layout style={{ height: "100vh", width: "100%" }}>
-      <Sider width="10%" className='slider' style={{ backgroundColor: '#ffffff' }}>
-        <div style={{ textAlign: "center", margin: "5% 0% 15% 0%" }}>
-          <img src={mySvg} alt="My SVG Icon" width="32px" height="32px" />
-        </div>
+
+      <Sider width="10%" className='slider' style={{ backgroundColor: param.pathname == '/job-indicator' ? '#eef2ff':'#ffffff' }}>
+        {param.pathname == '/job-indicator' ? null :
+
+          <div style={{ textAlign: "center", margin: "5% 0% 15% 0%" }}>
+            <img src={mySvg} alt="My SVG Icon" width="32px" height="32px" />
+          </div>
+        }
         <div style={{ textAlign: "center", margin: "5% 0% 15% 0%" }}>
           <img src=" https://sso.mypepsico.com/login/images/pepsico.png" alt="My SVG Icon" width="80px" height="20px" />
         </div>
@@ -63,50 +72,55 @@ const App = () => {
       </Sider>
 
       <Layout style={{ height: "100vh", width: "100%" }}>
-        <Header className=' header custom-header'
-          style={{ width: "88%", borderBottom: "1.5px solid #d0cdf5", backgroundColor:  "#f5f5f5" }}
-        >
-          <div className='header-container'>
-            {
-              param.pathname == '/SMSScreen' ? null :
-                <div className="testrole" disabled>{param.pathname.replace("/", "").toLocaleUpperCase()}</div>
-            }
-            <div style={{ width: '100%', justifyContent: 'flex-end', display: 'flex' }}>
-              <h3 style={{ color: 'black', padding: 10 }}> Seasoning Monitoring System</h3>
+        {
+          param.pathname == '/job-indicator' ? null :
 
-            </div>
-            <div className="header-dd">
-              {
-                param.pathname == '/SMSScreen' ? null :
+            <Header className=' header custom-header'
+              style={{ width: param.pathname == '/SMSScreen' ? '88%' : "98%", borderBottom: "1.5px solid #d0cdf5", backgroundColor: "#f5f5f5" }}
+            >
+              <div className='header-container'>
+                {
+                  param.pathname == '/SMSScreen' || param.pathname == '/job-indicator' ? null :
+                    <div className="testrole" disabled>{param.pathname.replace("/", "").toLocaleUpperCase()}</div>
+                }
+                <div style={{ width: '100%', justifyContent: 'flex-end', display: 'flex' }}>
 
-                  <select className="form-select header-dd" aria-label="Default select example" value="LE-USA025" disabled>
-                    <option selected>Frito-LayInc.</option>
-                  </select>
-              }
-            </div>
-            <div className="header-dd">
-              {
-                param.pathname == '/SMSScreen' ? null :
-                  <select className="form-select header-dd" aria-label="Default select example" disabled>
-                    <option selected>LE-USA025</option>
+                  <h3 style={{ color: 'black', padding: 10 }}> {param.pathname == '/SMSScreen' ? 'Seasoning Monitoring System' : param.pathname == '/job-indicator' ? '' : ''}</h3>
 
-                  </select>
-              }
+                </div>
+                <div className="header-dd">
+                  {
+                    param.pathname == '/SMSScreen' || param.pathname == '/job-indicator' ? null :
 
-            </div>
-            <div className="header-dd">
-              {
-                param.pathname == '/SMSScreen' ? null :
-                  <select className="form-select header-dd" aria-label="Default select example" disabled>
-                    <option selected>LE-USA025</option>
-                  </select>
-              }
-            </div>
-            <div>
-              {param.pathname == '/SMSScreen' ? <SMSUserProfile /> : <DJButtonWithPopover />}
-            </div>
-          </div>
-        </Header>
+                      <select className="form-select header-dd" aria-label="Default select example" value="LE-USA025" disabled>
+                        <option selected>Frito-LayInc.</option>
+                      </select>
+                  }
+                </div>
+                <div className="header-dd">
+                  {
+                    param.pathname == '/SMSScreen' || param.pathname == '/job-indicator' ? null :
+                      <select className="form-select header-dd" aria-label="Default select example" disabled>
+                        <option selected>LE-USA025</option>
+
+                      </select>
+                  }
+
+                </div>
+                <div className="header-dd">
+                  {
+                    param.pathname == '/SMSScreen' || param.pathname == '/job-indicator' ? null :
+                      <select className="form-select header-dd" aria-label="Default select example" disabled>
+                        <option selected>LE-USA025</option>
+                      </select>
+                  }
+                </div>
+                <div>
+                  {param.pathname == '/SMSScreen' ? <SMSUserProfile /> : <DJButtonWithPopover />}
+                </div>
+              </div>
+            </Header>
+        }
         <Content
           style={{ width: "100%", borderBottom: "1.5px solid #d0cdf5" }}
         >
