@@ -1,7 +1,8 @@
 import React from 'react'
 import { Routes, Route, Navigate, Link, Router, useParams, useLocation } from "react-router-dom";
 import './App.scss';
-import AddKpi from './components/sections/addKpi';
+import AddKpi from './components/sections/AddKpi';
+import MockupApp from './components/KpiDashBoardMockup/MockupApp';
 import { getSearchParameters } from './utils/utils';
 
 function App() {
@@ -10,13 +11,15 @@ const pickPageToDisplay = () => {
   switch(params.page) {
     case 'add-kpi':
       return <AddKpi />
+    case 'add-kpi-mockup':
+      return <MockupApp/>
     default:
       return <div>No page Found</div>
   }
 }
   return (
     <div className='row'>
-      <div className='col m-4 ms-5'>
+      <div className=''>
         {pickPageToDisplay()}
       </div>
      

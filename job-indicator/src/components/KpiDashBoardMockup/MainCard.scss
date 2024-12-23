@@ -1,0 +1,130 @@
+.main-card-Wrapper {
+  padding: 20px;
+}
+
+.main-card-Wrapper h3 {
+  margin-left: 9%;
+  font-family: system-ui;
+}
+
+.main-card {
+  // background-color: #fff;
+  // border-radius: 10px;
+  padding: 20px;
+  // position: relative;
+  margin-left: 8%;
+  // border: 1px solid #ccc;
+  // font-family: system-ui;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-card-section {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.card-title-wrap {
+  display: ruby;
+
+}
+
+.card-title {
+  margin-bottom: 5px;
+  font-family: system-ui;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+
+
+}
+
+.card-title span {
+  color: #a6a6a6;
+}
+
+.card-description {
+  font-family: system-ui;
+  color: #a6a6a6;
+  margin-top: 15px;
+}
+
+// .details {
+//   flex-direction: row;
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// .card-row {
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+// .card {
+//   background-color: #f2f2f2;
+//   border-radius: 10px;
+//   padding: 3%;
+//   width: 50%;
+//   text-align: center;
+//   margin-left: 10px;
+// }
+
+.card {
+  background-color:#f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(20% - 15px); /* Makes cards responsive and fit 5 per row */
+  text-align: center;
+}
+
+.card h4 {
+  margin-top: 5px;
+}
+
+.card span {
+  font-size: xx-large;
+  font-family: system-ui;
+  font-weight: bold;
+}
+
+
+.value {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.value.green {
+  color: green;
+}
+
+.value.red {
+  color: red;
+}
+
+.value.gray {
+  color: gray;
+}
+
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 15px); /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%; /* Stack cards vertically on very small screens */
+  }
+}
