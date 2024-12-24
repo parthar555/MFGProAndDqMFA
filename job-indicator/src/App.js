@@ -3,6 +3,7 @@ import { Routes, Route, Navigate, Link, Router, useParams, useLocation } from "r
 import './App.scss';
 import AddKpi from './components/sections/AddKpi';
 import MockupApp from './components/KpiDashBoardMockup/MockupApp';
+import AddKpiNew from './components/sections/AddKpiNew';
 import { getSearchParameters } from './utils/utils';
 
 function App() {
@@ -10,7 +11,7 @@ var params = getSearchParameters();
 const pickPageToDisplay = () => {
   switch(params.page) {
     case 'add-kpi':
-      return <AddKpi />
+      return <AddKpiNew />
     case 'add-kpi-mockup':
       return <MockupApp/>
     default:
@@ -22,7 +23,7 @@ const pickPageToDisplay = () => {
       <div className=''>
         {pickPageToDisplay()}
       </div>
-     
+
     </div>
   );
 }

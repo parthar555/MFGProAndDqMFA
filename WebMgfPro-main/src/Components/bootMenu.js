@@ -83,7 +83,7 @@ const Menu = () => {
         <div
           key={index}
           className="menu-item"
-          onMouseEnter={() => setActiveMenu(index)}
+          onMouseEnter={() => menu.submenu.length && setActiveMenu(index)}
           onMouseLeave={() => {
             setActiveMenu(null);
             setActiveSubmenu(null);
@@ -94,7 +94,7 @@ const Menu = () => {
             <div>{menu?.icon}</div>
             <div className='menu-text' onClick={() => handleClick(menu.title)}>{menu.title}</div>
           </div>
-          {activeMenu === index && (
+          { menu.submenu.length && activeMenu === index && (
             <div className="submenu">
               {menu.submenu.map((subItem, subIndex) => (
                 <div

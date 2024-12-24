@@ -1,9 +1,11 @@
 .p-datatable-wrapper {
     .p-datatable-table {
         .p-datatable-thead{
-            background: #D3D3D3;
-            color: #000;
-            height: 5rem;
+            background: #187bcd;
+            color: #ffffff;
+            height: 3.5rem;
+            text-align: center;
+            
             tr {
                 border: 0.5px solid gray;
             }
@@ -13,6 +15,7 @@
             }
         }
         .p-datatable-tbody {
+            text-align: center;
             tr {
                 height: 3rem;
                 border-bottom: 0.5px solid gray;
@@ -22,5 +25,6 @@
                 border-right: 0.5px solid gray;
             }
         }
+        
     }
 }

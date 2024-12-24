@@ -2,20 +2,10 @@ import React, { useState } from 'react';
 // import { DataGridPro } from "@mui/x-data-grid-pro";
 import { DataGrid } from "@mui/x-data-grid";
 
-import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
-
-import TextField from '@mui/material/TextField';
-import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
-import ReactDOM from 'react-dom/client';
-import './FilterdropDowncs.css'
+import '../Sections/FilterdropDowncs.css'
 import Box from '@mui/material/Box';
-import SMSDropDown from '../Components/SMSDropDown';
-import DataGridReactPrime from '../Components/DataGridReactPrime';
-import DataGridMUI from '../Components/DataGridMUI';
 
-import { DataTable } from 'primereact/datatable';
-import { Column } from 'primereact/column';
 
 const rowsData = [
     {
@@ -595,7 +585,7 @@ const products = [
 function escapeRegExp(value) {
     return value.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 }
-function SMSScreen() {
+const DataGridMUI = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
     const [rows, setRows] = React.useState(rowsData);
@@ -619,35 +609,57 @@ function SMSScreen() {
     return (
         <div  >
             <div style={{ background: 'white' }}>
-                <div style={{ width: '88%', paddingTop: 10, margin: 10, display: 'flex', justifyContent: 'right', marginRight: 30 }}>
-                    <SMSDropDown />
-                    <TextField
-                        label="Type at least 3 characters"
-                        id="outlined-size-small"
-                        size="small"
-                        showGridlines
-                        onChange={requestSearch}
+                <Box style={{ height: 480, width: '86%', marginLeft: 40 }}>
+                    <DataGrid rows={rows} columns={columns}
+                        initialState={{ pinnedColumns: { left: ['col1', 'col2', 'col3'] } }}
+                        sx={{
+                            ".MuiTablePagination-displayedRows, .MuiTablePagination-selectLabel": {
+                                "margin-top": "1em",
+                                "margin-bottom": "1em"
+
+                            },
+                            '.MuiDataGrid-columnHeader': {
+                                backgroundColor: "#187bcd",
+                                color: "white",
+                                fontWeight: 'bold',
+                            },
+                            '.MuiDataGrid-root.MuiDataGrid-columnHeaderTitle': {
+                                fontWeight: 'bold',
+                                overFlow: 'visible'
+                            },
+                            '.MuiDataGrid-iconButtonContainer': {
+                                visibility: 'visible',
+                            },
+                            '.MuiDataGrid-sortIcon': {
+                                opacity: 'inherit !important',
+                                color: "white",
+                            },
+                            ".MuiDataGrid-menuIconButton": {
+                                opacity: 'inherit !important',
+                                color: "white",
+                                sortable: true,
+                                visibility: 'visible',
+                            },
+                            ".MuiDataGrid-column:hover": {
+                                backgroundColor: "red" // Or 'transparent' or whatever color you'd like
+                            },
+                            "& .MuiDataGrid-columnHeaders": {
+                                // currently unused, changed to container--top
+                                backgroundColor: 'rgb(69,153,236)',
+                                color: 'white',
+                            },
+
+
+                        }}
+                        showCellVerticalBorder
+                        disableColumnMenu={false}
 
                     />
-                </div>
+                </Box>
                 
-                {
-                     <DataGridReactPrime/>
-                    // <DataGridMUI/>
-                }
-
-                <div style={{ marginTop: 40, marginBottom: 40, display: 'flex', alignItems: 'center', alignContent: 'center', justifyContent: 'center' }}>
-                    <Button variant="contained" style={{ marginRight: 10 }}>Login</Button>
-                    <Button variant="contained" style={{ marginRight: 10 }}>Logout</Button>
-                    <Button variant="contained" style={{ marginRight: 10 }}>Web Request</Button>
-                    <Button variant="contained" style={{ marginRight: 10 }}>Override</Button>
-                    <Button variant="contained" style={{ marginRight: 10 }}>Bypass</Button>
-                    <Button variant="contained" style={{ marginRight: 10 }}>Reset</Button>
-
-                </div>
             </div>
         </div>
     );
 }
 
-export default SMSScreen;
+export default DataGridMUI;
