@@ -19,16 +19,16 @@ import { Column } from 'primereact/column';
 
 const rowsData = [
     {
-
+ 
         id: 1,
         col1: "TC4", col2: "TC4SEA6", col3: "TC4SEA22", col4: "OMS",
         col5: "DORITOS-SWEET&TANYGY BBQ", col6: "",
         col7: "30058802", col8: "OFF", col9: "OFF", col10: "OFF",
         col11: "ON", col12: "Plugged", col13: ""
-
+ 
     },
     {
-
+ 
         id: 2,
         col1: "TC5", col2: "TC4SEA7", col3: "TC4SEA23", col4: "OMS",
         col5: "DORI-FLAMAS", col6: "",
@@ -36,7 +36,7 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
-
+ 
         id: 3,
         col1: "TC6", col2: "TC4SEA3", col3: "TC4SEA24", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -44,21 +44,21 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
-
+ 
         id: 4,
         col1: "TC4", col2: "TC4SEA5", col3: "TC4SEA25", col4: "OMS",
         col5: "DORITOS-SWEET&TANYGY BBQ", col6: "",
         col7: "30058805", col8: "OFF", col9: "ON", col10: "OFF",
         col11: "OFF", col12: "UnPlugged", col13: ""
     }, {
-
+ 
         id: 5,
         col1: "TC7", col2: "TC4SEA6", col3: "TC4SEA26", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
         col7: "30058806", col8: "ON", col9: "OFF", col10: "OFF",
         col11: "ON", col12: "UnPlugged", col13: ""
     }, {
-
+ 
         id: 6,
         col1: "TC4", col2: "TC4SEA1", col3: "TC4SEA27", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -66,7 +66,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 7,
         col1: "TC4", col2: "TC4SEA6", col3: "TC4SEA22", col4: "OMS",
         col5: "DORITOS-SWEET&TANYGY BBQ", col6: "",
@@ -74,7 +74,7 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
-
+ 
         id: 8,
         col1: "TC5", col2: "TC4SEA7", col3: "TC4SEA23", col4: "OMS",
         col5: "DORI-FLAMAS", col6: "",
@@ -82,7 +82,7 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
-
+ 
         id: 9,
         col1: "TC6", col2: "TC4SEA3", col3: "TC4SEA24", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -90,30 +90,30 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
-
+ 
         id: 10,
         col1: "TC4", col2: "TC4SEA5", col3: "TC4SEA25", col4: "OMS",
         col5: "DORITOS-SWEET&TANYGY BBQ", col6: "",
         col7: "30058805", col8: "OFF", col9: "ON", col10: "OFF",
         col11: "OFF", col12: "UnPlugged", col13: ""
     }, {
-
+ 
         id: 11,
         col1: "TC7", col2: "TC4SEA6", col3: "TC4SEA26", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
         col7: "30058806", col8: "ON", col9: "OFF", col10: "OFF",
         col11: "ON", col12: "UnPlugged", col13: ""
     }, {
-
+ 
         id: 12,
         col1: "TC4", col2: "TC4SEA1", col3: "TC4SEA27", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
         col7: "30058807", col8: "ON", col9: "ON", col10: "ON",
         col11: "ON", col12: "UnPlugged", col13: ""
     },
-
+ 
     {
-
+ 
         id: 13,
         col1: "TC9", col2: "TC4SEA12", col3: "TC4SEA28", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -121,7 +121,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 14,
         col1: "TC31", col2: "TC4SEA141", col3: "TC4SEA234", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -129,7 +129,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 15,
         col1: "TC46", col2: "TC4SEA17", col3: "TC4SEA23", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -137,7 +137,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 16,
         col1: "TC47", col2: "TC4SEA18", col3: "TC4SEA273", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -145,7 +145,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 17,
         col1: "TC48", col2: "TC4SEA19", col3: "TC4SEA274", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -153,7 +153,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 18,
         col1: "TC49", col2: "TC4SEA110", col3: "TC4SEA275", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -161,7 +161,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 20,
         col1: "TC50", col2: "TC4SEA111", col3: "TC4SEA276", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -169,14 +169,14 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 21,
         col1: "TC51", col2: "TC4SEA112", col3: "TC4SEA277", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
         col7: "30058807", col8: "ON", col9: "ON", col10: "ON",
         col11: "ON", col12: "UnPlugged", col13: ""
     }, {
-
+ 
         id: 22,
         col1: "TC51", col2: "TC4SEA113", col3: "TC4SEA278", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -184,7 +184,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 23,
         col1: "TC52", col2: "TC4SEA114", col3: "TC4SEA279", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -192,7 +192,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 25,
         col1: "TC52", col2: "TC4SEA115", col3: "TC4SEA280", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -200,7 +200,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 26,
         col1: "TC53", col2: "TC4SEA116", col3: "TC4SEA282", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -208,7 +208,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 27,
         col1: "TC50", col2: "TC4SEA116", col3: "TC4SEA281", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -216,7 +216,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 28,
         col1: "TC40", col2: "TC4SEA117", col3: "TC4SEA276", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -224,7 +224,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 29,
         col1: "TC42", col2: "TC4SEA126", col3: "TC4SEA270", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -232,7 +232,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 30,
         col1: "TC44", col2: "TC4SEA121", col3: "TC4SEA272", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -240,7 +240,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 31,
         col1: "TC30", col2: "TC4SEA181", col3: "TC4SEA53", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -248,7 +248,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 32,
         col1: "TC53", col2: "TC4SEA121", col3: "TC4SEA276", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -256,7 +256,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 33,
         col1: "TC55", col2: "TC4SEA141", col3: "TC4SEA278", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -264,7 +264,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 34,
         col1: "TC61", col2: "TC4SEA153", col3: "TC4SEA2721", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -272,7 +272,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 35,
         col1: "TC62", col2: "TC4SEA131", col3: "TC4SEA273", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -280,7 +280,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 36,
         col1: "TC4", col2: "TC4SEA1", col3: "TC4SEA179", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -288,7 +288,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 37,
         col1: "TC61", col2: "TC4SEA521", col3: "TC4SEA252", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -296,7 +296,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
-
+ 
         id: 38,
         col1: "TC31", col2: "TC4SEA321", col3: "TC4SEA171", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -510,88 +510,6 @@ const columns = [
     { field: "col13", headerName: "WB Recovery", width: 200 },
 
 ];
-const products = [
-    {
-        id: 1,
-        name: "Apple Watch",
-        price: "₦350,000",
-        category: "Accessories",
-        quantity: "7",
-        rating: "5",
-    },
-    {
-        id: 2,
-        name: "Fitness watch",
-        price: "₦10,000",
-        category: "Fitness",
-        quantity: "23",
-        rating: "2",
-    },
-    {
-        id: 3,
-        name: "Beach dress",
-        price: "₦25,000",
-        category: "Clothing",
-        quantity: "5",
-        rating: "4",
-    },
-    {
-        id: 4,
-        name: "Washing machine",
-        price: "₦260,000",
-        category: "Electronics",
-        quantity: "10",
-        rating: "4",
-    },
-    {
-        id: 5,
-        name: "Blue Jeans",
-        price: "₦10,000",
-        category: "Clothing",
-        quantity: "50",
-        rating: "5",
-    },
-    {
-        id: 6,
-        name: "Samsung Watch",
-        price: "₦270,000",
-        category: "Accessories",
-        quantity: "7",
-        rating: "3",
-    },
-    {
-        id: 7,
-        name: "Yoga mat",
-        price: "₦15,000",
-        category: "Fitness",
-        quantity: "15",
-        rating: "4",
-    },
-    {
-        id: 8,
-        name: "Jumpsuit",
-        price: "₦15,700",
-        category: "Clothing",
-        quantity: "30",
-        rating: "5",
-    },
-    {
-        id: 9,
-        name: "Hand mixer",
-        price: "₦50,000",
-        category: "Electronics",
-        quantity: "10",
-        rating: "4",
-    },
-    {
-        id: 10,
-        name: "Pallazo",
-        price: "₦12,000",
-        category: "Clothing",
-        quantity: "4",
-        rating: "3",
-    },
-];
 function escapeRegExp(value) {
     return value.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 }
@@ -601,7 +519,6 @@ function SMSScreen() {
     const [rows, setRows] = React.useState(rowsData);
 
     const requestSearch = (searchValue) => {
-
         if (searchValue.target.value.length > 2) {
             const searchRegex = new RegExp(escapeRegExp(searchValue.target.value), 'i');
             const filteredRows = rows.filter((row) => {
