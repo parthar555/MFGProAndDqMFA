@@ -1,23 +1,24 @@
 import React from 'react'
 import { Routes, Route, Navigate, Link, Router, useParams, useLocation } from "react-router-dom";
 import './App.scss';
-import AddKpi from './components/sections/AddKpi';
-import MockupApp from './components/KpiDashBoardMockup/MockupApp';
+import AddKpi from './components/sections/addKpi';
 import AddKpiNew from './components/sections/AddKpiNew';
+import MockupApp from './components/KpiDashBoardMockup/MockupApp';
 import { getSearchParameters } from './utils/utils';
 
 function App() {
-var params = getSearchParameters();
-const pickPageToDisplay = () => {
-  switch(params.page) {
-    case 'add-kpi':
-      return <AddKpiNew />
-    case 'add-kpi-mockup':
-      return <MockupApp/>
-    default:
-      return <div>No page Found</div>
+  var params = getSearchParameters();
+  const pickPageToDisplay = () => {
+    switch (params.page) {
+      case 'add-kpi':
+        return <AddKpiNew />
+      case 'add-kpi-mockup':
+        return <MockupApp />
+
+      default:
+        return <div>No page Found</div>
+    }
   }
-}
   return (
     <div className='row'>
       <div className=''>
