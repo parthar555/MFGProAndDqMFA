@@ -632,8 +632,8 @@ function SMSScreen() {
                 </div>
                 
                 {
-                     <DataGridReactPrime/>
-                    // <DataGridMUI/>
+                    //  <DataGridReactPrime/>
+                     <DataGridMUI/>
                 }
 
                 <div style={{ marginTop: 40, marginBottom: 40, display: 'flex', alignItems: 'center', alignContent: 'center', justifyContent: 'center' }}>
