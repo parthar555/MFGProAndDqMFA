@@ -4,7 +4,7 @@ import './App.scss';
 import AddKpi from './components/sections/addKpi';
 import AddKpiNew from './components/sections/AddKpiNew';
 import MockupApp from './components/KpiDashBoardMockup/MockupApp';
-import AddKpiNew from './components/sections/AddKpiNew';
+
 import { getSearchParameters } from './utils/utils';
 
 function App() {

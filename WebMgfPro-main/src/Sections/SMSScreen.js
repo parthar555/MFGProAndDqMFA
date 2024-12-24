@@ -19,16 +19,16 @@ import { Column } from 'primereact/column';
 
 const rowsData = [
     {
- 
+
         id: 1,
         col1: "TC4", col2: "TC4SEA6", col3: "TC4SEA22", col4: "OMS",
         col5: "DORITOS-SWEET&TANYGY BBQ", col6: "",
         col7: "30058802", col8: "OFF", col9: "OFF", col10: "OFF",
         col11: "ON", col12: "Plugged", col13: ""
- 
+
     },
     {
- 
+
         id: 2,
         col1: "TC5", col2: "TC4SEA7", col3: "TC4SEA23", col4: "OMS",
         col5: "DORI-FLAMAS", col6: "",
@@ -36,7 +36,7 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
- 
+
         id: 3,
         col1: "TC6", col2: "TC4SEA3", col3: "TC4SEA24", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -44,21 +44,21 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
- 
+
         id: 4,
         col1: "TC4", col2: "TC4SEA5", col3: "TC4SEA25", col4: "OMS",
         col5: "DORITOS-SWEET&TANYGY BBQ", col6: "",
         col7: "30058805", col8: "OFF", col9: "ON", col10: "OFF",
         col11: "OFF", col12: "UnPlugged", col13: ""
     }, {
- 
+
         id: 5,
         col1: "TC7", col2: "TC4SEA6", col3: "TC4SEA26", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
         col7: "30058806", col8: "ON", col9: "OFF", col10: "OFF",
         col11: "ON", col12: "UnPlugged", col13: ""
     }, {
- 
+
         id: 6,
         col1: "TC4", col2: "TC4SEA1", col3: "TC4SEA27", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -66,7 +66,7 @@ const rowsData = [
         col11: "ON", col12: "UnPlugged", col13: ""
     },
     {
- 
+
         id: 7,
         col1: "TC4", col2: "TC4SEA6", col3: "TC4SEA22", col4: "OMS",
         col5: "DORITOS-SWEET&TANYGY BBQ", col6: "",
@@ -74,7 +74,7 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
- 
+
         id: 8,
         col1: "TC5", col2: "TC4SEA7", col3: "TC4SEA23", col4: "OMS",
         col5: "DORI-FLAMAS", col6: "",
@@ -82,7 +82,7 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
- 
+
         id: 9,
         col1: "TC6", col2: "TC4SEA3", col3: "TC4SEA24", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
@@ -90,21 +90,21 @@ const rowsData = [
         col11: "ON", col12: "Plugged", col13: ""
     },
     {
- 
+
         id: 10,
         col1: "TC4", col2: "TC4SEA5", col3: "TC4SEA25", col4: "OMS",
         col5: "DORITOS-SWEET&TANYGY BBQ", col6: "",
         col7: "30058805", col8: "OFF", col9: "ON", col10: "OFF",
         col11: "OFF", col12: "UnPlugged", col13: ""
     }, {
- 
+
         id: 11,
         col1: "TC7", col2: "TC4SEA6", col3: "TC4SEA26", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
         col7: "30058806", col8: "ON", col9: "OFF", col10: "OFF",
         col11: "ON", col12: "UnPlugged", col13: ""
     }, {
- 
+
         id: 12,
         col1: "TC4", col2: "TC4SEA1", col3: "TC4SEA27", col4: "OMS",
         col5: "DORITOS-FLAMAS", col6: "",
