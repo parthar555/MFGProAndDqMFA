@@ -578,6 +578,7 @@ function SMSScreen() {
     const [rows, setRows] = React.useState(rowsData);
 
     const requestSearch = (searchValue) => {
+
         if (searchValue.target.value.length > 2) {
             const searchRegex = new RegExp(escapeRegExp(searchValue.target.value), 'i');
             const filteredRows = rows.filter((row) => {
