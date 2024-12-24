@@ -413,8 +413,8 @@ const AddKpiNew = () => {
                                                 filter placeholder="Select Micro Role" maxSelectedLabels={3}  
                                                 display="chip"
                                                 style={{ fontSize: 14, width: '100%' }}
+                                                className="textInput"
                                                 itemTemplate={countryOptionTemplate}
-className="textInput"
                                             />
 
                                         </div>
