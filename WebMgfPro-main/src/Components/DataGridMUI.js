@@ -7,7 +7,7 @@ import '../Sections/FilterdropDowncs.css'
 import Box from '@mui/material/Box';
 
 
-const rowsData = [
+const rowsData1 = [
     {
 
         id: 1,
@@ -585,32 +585,18 @@ const products = [
 function escapeRegExp(value) {
     return value.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
 }
-const DataGridMUI = () => {
+const DataGridMUI = (props) => {
+    console.log("askdsakhd " + JSON.stringify(props.rowsData))
     const [isLoading, setIsLoading] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
-    const [rows, setRows] = React.useState(rowsData);
 
-    const requestSearch = (searchValue) => {
-        if (searchValue.target.value.length > 2) {
-            const searchRegex = new RegExp(escapeRegExp(searchValue.target.value), 'i');
-            const filteredRows = rows.filter((row) => {
-                return Object.keys(row).some((field) => {
-                    console.log("searchRegex " + row[field])
-                    return searchRegex.test(row[field].toString());
-                });
-            });
-            setRows(filteredRows);
-        } else {
-            setRows(rowsData);
-        }
-    };
-
+   
 
     return (
         <div  >
             <div style={{ background: 'white' }}>
                 <Box style={{ height: 480, width: '86%', marginLeft: 40 }}>
-                    <DataGrid rows={rows} columns={columns}
+                    <DataGrid rows={props.rowsData} columns={columns}
                         initialState={{ pinnedColumns: { left: ['col1', 'col2', 'col3'] } }}
                         sx={{
                             ".MuiTablePagination-displayedRows, .MuiTablePagination-selectLabel": {

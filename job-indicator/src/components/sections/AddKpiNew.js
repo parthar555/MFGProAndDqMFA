@@ -265,7 +265,21 @@ const AddKpiNew = () => {
     const showSuccess = () => {
         toast.current.show({ severity: 'success', summary: 'Success', detail: 'Kpi created successfully!', life: 10000 });
     }
-
+    const countryOptionTemplate = (option) => {
+        return (
+            <div >
+                <div style={{paddingTop:5,paddingBottom:5, margin:5, alignContent:'center',display:'flex', justifyContent:'center'}}>{option.name}</div>
+            </div>
+        );
+    };
+    const filterOptionTemplate = (option) => {
+        return (
+            <div className="flex gap-2"  style={{width:'100%', background:'red'}}>
+                <InputText className="textInput" value={kpiTitle} onChange={(e) => setKpiTitle(e.target.value)}  placeholder="Enter your KPI Title" />
+            </div>
+        );
+    };
+    
 
     return (
         <div className="add-kpi" style={{ }}>
@@ -275,8 +289,8 @@ const AddKpiNew = () => {
                 <div className="column" style={{ display: 'flex' }} >
                     <div style={{ width: '28%' }} >
                         <div className="title">KPI Title</div>
-                        <div className="card flex justify-content-center" style={{ marginTop: 3, width: '93%' }}>
-                            <InputText style={{ borderColor: 'transparent', width: '100%' }} value={kpiTitle} onChange={(e) => setKpiTitle(e.target.value)} className="input" placeholder="Enter your KPI Title" />
+                        <div  style={{ marginTop: 3, width: '93%' }}>
+                            <InputText className="textInput" value={kpiTitle} onChange={(e) => setKpiTitle(e.target.value)}  placeholder="Enter your KPI Title" />
                         </div>
 
                         {
@@ -287,8 +301,8 @@ const AddKpiNew = () => {
                     </div>
                     <div style={{ width: '28%' }} >
                         <div className="title">KPI Description</div>
-                        <div className="card flex justify-content-center" style={{ marginTop: 3, width: '93%' }}>
-                            <InputText style={{ borderColor: 'transparent', width: '100%' }} value={kpiDescription} onChange={(e) => setKpiDescription(e.target.value)} className="input" placeholder="Enter your KPI Description" />
+                        <div  style={{ marginTop: 3, width: '93%' }}>
+                            <InputText className="textInput" value={kpiDescription} onChange={(e) => setKpiDescription(e.target.value)}  placeholder="Enter your KPI Description" />
                         </div>
 
                         {
@@ -304,6 +318,8 @@ const AddKpiNew = () => {
                                 placeholder="Select a KPI"
                                 style={{ width: '100%', fontSize: 14 }}
                                 editable
+                                className="textInput"
+                                itemTemplate={countryOptionTemplate}
                             />
                         </div>
 
@@ -323,7 +339,8 @@ const AddKpiNew = () => {
                                 placeholder="Select a Preset Time"
                                 style={{ width: '100%', fontSize: 14 }}
                                 editable
-
+                                className="textInput"
+                                itemTemplate={countryOptionTemplate}
                             />
                         </div>
                         {
@@ -337,7 +354,7 @@ const AddKpiNew = () => {
                         <div className="title">Start Time</div>
                         <div >
                             <Calendar showTime value={startDate} onChange={(e) => setStartDate(e.value)} showIcon={true} minDate={minDate} maxDate={maxDate}
-                                style={{ fontSize: 14 }}
+                                style={{ fontSize: 14, height: 40 }}
                                 placeholder="Select Start Time"
                             ></Calendar>
                         </div>
@@ -352,7 +369,7 @@ const AddKpiNew = () => {
                         <div className="title" >End Time</div>
                         <div >
                             <Calendar showTime value={endDate} onChange={(e) => setEndDate(e.value)} showIcon={true} minDate={minDate} maxDate={maxDate}
-                                style={{ fontSize: 14 }}
+                                 style={{ fontSize: 14, height: 40 }}
                                 placeholder="Select End Time"
                             ></Calendar>
                         </div>
@@ -375,9 +392,11 @@ const AddKpiNew = () => {
                                         <div >
                                             {/* <InputText value={''} className="input" placeholder="Role"/> */}
                                             <MultiSelect value={selectedRoles} onChange={(e) => setSelectedRoles(e.value)} options={JobIndicatorData.roles} optionLabel="name"
-                                                filter placeholder="Select Role" maxSelectedLabels={3} className="w-full md:w-200rem"
+                                                filter placeholder="Select Role" maxSelectedLabels={3} 
                                                 display="chip"
                                                 style={{ fontSize: 14, width: '100%' }}
+                                                 className="textInput"
+                                                 itemTemplate={countryOptionTemplate}
                                             />
 
                                         </div>
@@ -391,10 +410,11 @@ const AddKpiNew = () => {
                                         <div className="title">Micro Role</div>
                                         <div >
                                             <MultiSelect value={selectedMicroRoles} onChange={(e) => setSelectedMicroRoles(e.value)} options={JobIndicatorData.microRoles} optionLabel="name"
-                                                filter placeholder="Select Micro Role" maxSelectedLabels={3} className="w-full md:w-20rem"
+                                                filter placeholder="Select Micro Role" maxSelectedLabels={3}  
                                                 display="chip"
                                                 style={{ fontSize: 14, width: '100%' }}
-
+                                                itemTemplate={countryOptionTemplate}
+className="textInput"
                                             />
 
                                         </div>
@@ -411,9 +431,10 @@ const AddKpiNew = () => {
                                         <div className="title">Line</div>
                                         <div >
                                             <MultiSelect value={selectedLines} onChange={(e) => setSelectedLines(e.value)} options={JobIndicatorData.lines} optionLabel="name"
-                                                filter placeholder="Select Line" maxSelectedLabels={3} className="w-full md:w-20rem" display="chip"
+                                                filter placeholder="Select Line" maxSelectedLabels={3}  display="chip"
                                                 style={{ fontSize: 14, width: '100%' }}
-
+                                                className="textInput"
+                                                itemTemplate={countryOptionTemplate}
                                             />
 
                                         </div>
@@ -427,8 +448,10 @@ const AddKpiNew = () => {
                                         <div className="title">Product Group</div>
                                         <div >
                                             <MultiSelect value={selectedProductGroups} onChange={(e) => setSelectedProductGroups(e.value)} options={JobIndicatorData.productGroup} optionLabel="name"
-                                                filter placeholder="Select Product Group" maxSelectedLabels={3} className="w-full md:w-20rem" display="chip"
+                                                filter placeholder="Select Product Group" maxSelectedLabels={3}  display="chip"
                                                 style={{ fontSize: 14, width: '100%' }}
+                                                className="textInput"
+                                                itemTemplate={countryOptionTemplate}
                                             />
 
                                         </div>
@@ -445,9 +468,10 @@ const AddKpiNew = () => {
                                         <div className="title">Site</div>
                                         <div >
                                             <MultiSelect value={selectedSiteKpi} onChange={(e) => setSelectedSiteKpi(e.value)} options={JobIndicatorData.site} optionLabel="name"
-                                                filter placeholder="Select Site" maxSelectedLabels={3} className="w-full md:w-20rem" display="chip"
+                                                filter placeholder="Select Site" maxSelectedLabels={3}  display="chip"
                                                 style={{ fontSize: 14, width: '100%' }}
-
+                                                className="textInput"
+                                                itemTemplate={countryOptionTemplate}
                                             />
 
                                         </div>
@@ -466,8 +490,8 @@ const AddKpiNew = () => {
 
                 <div style={{ display: 'flex', width: '83%', alignItems: 'flex-end', justifyContent: 'flex-end', flexDirection: 'row', marginTop: 20, marginBottom: 20 }}>
 
-                    <Button label="Cancel" rounded style={{ background: 'transparent', color: 'black', width: 130, borderRadius: 10 }} />
-                    <Button label="Submit" rounded style={{ borderRadius: 10, width: 130, marginLeft: 10 }} onClick={onClickSubmitButton} />
+                    <Button label="Cancel" rounded style={{ background: 'transparent', color: 'black', width: 130,padding:10, borderRadius: 10 }} />
+                    <Button label="Submit" rounded style={{ borderRadius: 10, width: 130,padding:10, marginLeft: 10 }} onClick={onClickSubmitButton} />
 
                 </div>
             </div>
